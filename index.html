@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio01</title>
+    <link rel="stylesheet" href="./css/global/style.css" />
+    <link rel="stylesheet" href="./css/barraDesconto/style.css" />
+    <link rel="stylesheet" href="./css/barraBusca/style.css" />
+    <link rel="stylesheet" href="./css/categorias/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container" style="border: 2px solid #d80ee6">
+        <ul>
+          <li>Ganhe</li>
+          <li id="preco">R$10,00</li>
+          <li>de desconto no seu primeiro pedido. Ultilize o cupom</li>
+          <li id="desc">Desconto10</li>
+        </ul>
+        <div class="container-busca">
+          <div class="logo">
+            <img
+              src="./public/images/Captura de tela 2025-04-03 195124.png"
+              alt="logo avanti"
+            />
+          </div>
+          <div class="div-busca">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 15px;
+                border: 1px solid rgb(229, 229, 237);
+                width: 60%;
+                height: 40px;
+                border-radius: 10px;
+              "
+            >
+              <input
+                type="text"
+                name="busca"
+                id="busca"
+                placeholder="Digite aqui o que você procura"
+              />
+              <button
+                type="button"
+                style="
+                  border: none;
+                  background: transparent;
+                  color: rgb(0, 3, 5);
+                "
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  style="font-size: large"
+                ></i>
+              </button>
+            </div>
+          </div>
+          <div class="cliente">
+            <div style="display: flex; gap: 4px">
+              <i
+                class="fa-solid fa-user"
+                style="color: #2694e8; font-size: 30px"
+              ></i>
+              <p style="font-size: 13px">
+                Olá,<br />
+                Nome cliente!
+              </p>
+            </div>
+            <i
+              id="shop"
+              class="fas fa-shopping-cart"
+              style="font-size: 25px; color: #fd4949"
+            ></i>
+          </div>
+        </div>
+        <nav>
+          <div class="categorias" style="border: 1px solid black">
+            <button type="button" id="btn-todCats">
+              <i class="fa-solid fa-bars"></i>
+              Todas as Categorias
+            </button>
+            <button type="button" id="dep">Departamento</button>
+            <p>Departamento</p>
+            <p>Departamento</p>
+            <p>Departamento</p>
+            <p>Departamento</p>
+            <p>Departamento</p>
+            <p>Departamento</p>
+            <p>Departamento</p>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </body>
+</html>

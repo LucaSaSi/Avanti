@@ -1,0 +1,24 @@
+nav {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.categorias {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+#dep {
+  color: #333;
+  border: none;
+  background: none;
+}
+#btn-todCats:hover,
+#dep:hover {
+  cursor: pointer;
+  color: #2b8cf4;
+  font-weight: bold;
+  text-decoration: none;
+}

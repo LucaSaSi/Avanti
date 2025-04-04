@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    font-family: "Dosis", sans-serif;
+    gap: 5px;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    width: 100%;
+    background: rgb(61, 106, 229);
+    color: aliceblue;
+    #preco {
+      border-radius: 5px;
+      background: #7861bf;
+      color: aliceblue;
+      font-family: "Courier New", Courier, monospace;
+    }
+    #desc {
+      font-weight: 100;
+      font-style: italic;
+      font-family: "embedded-opentype", sans-serif;
+      font-size: 17px;
+    }
+  }
+  .container-busca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
