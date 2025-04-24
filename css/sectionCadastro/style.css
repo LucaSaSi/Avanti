@@ -1,0 +1,230 @@
+.entre-em-contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 700px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.paredeAvanti {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+
+.paredeAvanti p {
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+  background-color: blue;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 22px;
+}
+
+.paredeAvanti img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  gap: 5px;
+  margin-top: 30px;
+}
+
+.newsletter p {
+  font-size: 15px;
+  color: #000;
+  font-weight: 800;
+}
+.newsletter a {
+  text-decoration: none;
+  color: blue;
+}
+.newsletter a:hover {
+  font-weight: 800;
+  transition: text-decoration 0.3s ease;
+}
+
+.entre-em-contato form {
+  background: #ddd;
+  border-radius: 10px;
+  width: 80%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.entre-em-contato form .nome-email {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: 100%;
+  width: 50%;
+  gap: 10px;
+}
+
+.entre-em-contato form .nome-email input {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  height: 30%;
+  width: 40%;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.entre-em-contato form .checkbox-container {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.button-cadastro {
+  background-color: blue;
+  width: 30%;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-cadastro:hover {
+  background-color: #0e1060;
+  transition: background-color 0.3s ease;
+}
+
+.entre-em-contato form .checkbox {
+  gap: 2px;
+  display: flex;
+}
+
+.entre-em-contato form .checkbox span {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  .entre-em-contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .paredeAvanti {
+    display: flex;
+  }
+  .newsletter {
+    height: 40px;
+  }
+  .newsletter p {
+    font-size: 12px;
+  }
+  .entre-em-contato form {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .entre-em-contato form .nome-email {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .entre-em-contato form .nome-email input {
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 21px;
+    text-align: left;
+  }
+
+  .entre-em-contato form .checkbox-container {
+    width: 60%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .entre-em-contato form .checkbox {
+    gap: 2px;
+    display: flex;
+  }
+
+  .entre-em-contato form .checkbox span {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 412px) {
+  .entre-em-contato form {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .entre-em-contato form .nome-email {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .entre-em-contato form .checkbox-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .entre-em-contato form .checkbox-container span {
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+  }
+
+  .entre-em-contato form .checkbox-container .button-cadastro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+  }
+}

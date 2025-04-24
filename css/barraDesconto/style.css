@@ -1,39 +1,106 @@
 .container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
   width: 100%;
+  height: 150px;
+  padding-bottom: 10px;
+  box-shadow: #bcb7cb 0px 0px 5px 0px;
+}
 
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    font-family: "Dosis", sans-serif;
-    gap: 5px;
-    font-size: 13px;
-    padding: 0;
-    margin: 0;
-    height: 30px;
-    width: 100%;
-    background: rgb(61, 106, 229);
-    color: aliceblue;
-    #preco {
-      border-radius: 5px;
-      background: #7861bf;
-      color: aliceblue;
-      font-family: "Courier New", Courier, monospace;
-    }
-    #desc {
-      font-weight: 100;
-      font-style: italic;
-      font-family: "embedded-opentype", sans-serif;
-      font-size: 17px;
-    }
+.container .texto-desconto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Dosis", sans-serif;
+  font-size: 13px;
+  padding: 0;
+  gap: 5px;
+  margin: 0;
+  height: 30px;
+  width: 100%;
+  background: rgb(61, 106, 229);
+  color: aliceblue;
+}
+
+.container .texto-desconto #preco {
+  border-radius: 5px;
+  background: #5f3cca;
+  color: aliceblue;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container .texto-desconto #desconto {
+  font-weight: 100;
+  font-style: italic;
+  font-family: "embedded-opentype", sans-serif;
+  font-size: 17px;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: 150px;
   }
-  .container-busca {
+  .container .texto-desconto {
+    display: flex;
+    gap: 10px;
+    height: auto;
+    font-size: 12px;
+  }
+
+  .container .texto-desconto #desc {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container .logo-header {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .container {
+    width: 100%;
+    height: 250px;
     display: flex;
     justify-content: center;
+  }
+
+  .container .texto-desconto {
+    display: none;
+  }
+  .container .logo-header {
+    display: flex;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+  }
+
+ 
+}
+
+@media (max-width: 915px) and (orientation: landscape) {
+  .container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .container .texto-desconto {
+    display: flex;
+    gap: 10px;
+    height: 30px;
+  }
+
+  .container .logo-header {
+    display: none;
+  }
+
+  .container .categorias {
+    display: flex;
   }
 }

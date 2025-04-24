@@ -3,13 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desafio01</title>
+    <title>Avanti Desafio</title>
     <link rel="stylesheet" href="./css/global/style.css" />
     <link rel="stylesheet" href="./css/barraDesconto/style.css" />
     <link rel="stylesheet" href="./css/barraBusca/style.css" />
     <link rel="stylesheet" href="./css/categorias/style.css" />
+    <link rel="stylesheet" href="./css/banerCadeira/style.css" />
+    <link rel="stylesheet" href="./css/carrossel/style.css" />
+    <link rel="stylesheet" href="./css/bannerCaneca/style.css" />
+    <link rel="stylesheet" href="./css/taboaCaneca/style.css" />
+    <link rel="stylesheet" href="./css/sectionCadastro/style.css" />
+    <link rel="stylesheet" href="./css/contatos/style.css" />
+    <link rel="stylesheet" href="./css/footer/style.css" />
+    <link rel="stylesheet" href="./css/tabelaDepartamento/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap"
       rel="stylesheet"
@@ -22,65 +34,55 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script src="./script/script.js"></script>
+    <script src="./script/busca.js" defer></script>
+    <script src="./script/dep-cat.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="container" style="border: 2px solid #d80ee6">
-        <ul>
-          <li>Ganhe</li>
-          <li id="preco">R$10,00</li>
-          <li>de desconto no seu primeiro pedido. Ultilize o cupom</li>
-          <li id="desc">Desconto10</li>
-        </ul>
+    <!-- <header class="header"> -->
+      <div class="container">
+        <div class="logo-header">
+          <img src="./public/images/logoAvanti.png" alt="logo avanti">
+        </div>
+        <div class="texto-desconto">
+          <p>Ganhe</p>
+          <p id="preco">R$10,00</p>
+          <p>de desconto no seu primeiro pedido. Ultilize o cupom</p>
+          <p id="desconto">Desconto10</p>
+        </div>
         <div class="container-busca">
-          <div class="logo">
+          <div class="div-logo">
             <img
-              src="./public/images/Captura de tela 2025-04-03 195124.png"
+              src="./public/images/logoAvanti.png"
               alt="logo avanti"
             />
           </div>
           <div class="div-busca">
             <div
-              style="
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 15px;
-                border: 1px solid rgb(229, 229, 237);
-                width: 60%;
-                height: 40px;
-                border-radius: 10px;
-              "
+              class="input-busca"
             >
               <input
                 type="text"
                 name="busca"
                 id="busca"
                 placeholder="Digite aqui o que você procura"
+            
               />
               <button
-                type="button"
-                style="
-                  border: none;
-                  background: transparent;
-                  color: rgb(0, 3, 5);
-                "
+              id="btn-busca"
+                type="button"  
               >
                 <i
-                  class="fa-solid fa-magnifying-glass"
-                  style="font-size: large"
+                  class="fa-solid fa-magnifying-glass icon-lupa"
                 ></i>
               </button>
             </div>
           </div>
           <div class="cliente">
-            <div style="display: flex; gap: 4px">
-              <i
+            <div class="cliente-icons">
+              <i id="user"
                 class="fa-solid fa-user"
-                style="color: #2694e8; font-size: 30px"
               ></i>
-              <p style="font-size: 13px">
+              <p>
                 Olá,<br />
                 Nome cliente!
               </p>
@@ -88,17 +90,19 @@
             <i
               id="shop"
               class="fas fa-shopping-cart"
-              style="font-size: 25px; color: #fd4949"
             ></i>
           </div>
         </div>
-        <nav>
-          <div class="categorias" style="border: 1px solid black">
-            <button type="button" id="btn-todCats">
+          <div class="categorias">
+            <button 
+            type="button"
+             id="btn-todCats">
               <i class="fa-solid fa-bars"></i>
               Todas as Categorias
             </button>
-            <button type="button" id="dep">Departamento</button>
+            <button
+             type="button"
+              id="dep">Departamento</button>
             <p>Departamento</p>
             <p>Departamento</p>
             <p>Departamento</p>
@@ -107,8 +111,556 @@
             <p>Departamento</p>
             <p>Departamento</p>
           </div>
-        </nav>
+        <div class="tabela-dep-cat">
+          <div class="departamentos ">
+            <table class="table-departamento">
+              <thead >
+                <tr>
+                  <th style="padding-bottom: 10px;">Departamento</th>
+                </tr>
+              </thead>
+              <tbody class="tbody-tabela-dep">
+                <td>Departamento 
+                  <i class="fa-solid fa-arrow-right"></i>
+                </td>
+              </tbody>              <tbody class="tbody-tabela-dep">
+                <td>Departamento
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </td>
+              </tbody>              <tbody class="tbody-tabela-dep">
+                <td>Departamento
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </td>
+              </tbody>              <tbody class="tbody-tabela-dep">
+                <td>Departamento
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </td>
+              </tbody>              <tbody class="tbody-tabela-dep">
+                <td>Departamento
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </td>
+              </tbody>              <tbody class="tbody-tabela-dep">
+                <td>Departamento
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </td>
+              </tbody>              <tbody class="tbody-tabela-dep">
+                <td>Departamento
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </td>
+              </tbody>              <tbody class="tbody-tabela-dep">
+                <td>Departamento
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </td>
+              </tbody>              <tbody class="tbody-tabela-dep">
+                <td>Departamento
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </td>
+              </tbody>              <tbody class="tbody-tabela-dep">
+                <td>Departamento
+                  <i class="fa-solid fa-arrow-right"></i>
+
+                </td>
+              </tbody>
+            </table>
+          </div>
+          <div class="container-dep-cat">
+          <h2>Departamento</h2>
+              <table>
+                <thead class="">
+                  <tr>
+                    <th>Categoria</th>
+                    <th>Categoria</th>
+                    <th>Categoria</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <td>Categoria</td>
+                  <td>Categoria</td>
+                  <td>Categoria</td>
+                </tbody>     
+                     <tbody>
+                  <td>Categoria</td>
+                  <td>Categoria</td>
+                  <td>Categoria</td>
+                </tbody>    
+                      <tbody>
+                  <td>Categoria</td>
+                  <td>Categoria</td>
+                  <td>Categoria</td>
+                </tbody>     
+                     <tbody>
+                  <td>Categoria</td>
+                  <td>Categoria</td>
+                  <td>Categoria</td>
+                </tbody>
+                <tbody>
+                  <td>Categoria</td>
+                  <td>Categoria</td>
+                  <td>Categoria</td>
+                </tbody> 
+                  <tbody>
+                  <td>Categoria</td>
+                  <td>Categoria</td>
+                  <td>Categoria</td>
+                </tbody>
+              </table>
+          </div>
+            <div class="img-dep-cat">
+              <img 
+              style="width: 100%; border-radius: 10px; object-fit: cover;"
+               src="./public/images/taboaCaneca.png" alt="imagem de uma caneca avanti"
+               class="img-dep-cat-resp" />
+            </div>          
+        </div>
       </div>
-    </header>
+    <!-- </header> -->
+    <div class="container-banner">
+      <div class="lado-esquerdo">
+          <img
+            style="height: 100%; width: 100%; object-fit: cover"
+            src="./public/images/cadeira-fundo.PNG"
+            alt="imagem de um produto"
+          />
+      </div>
+      <div class="lado-direito">
+        <div class="super-sale"        >
+          <p id="super">SUPER</p>
+          <p id="sale">SALE</p>
+        </div>
+        <p id="itens">ITENS SELECIONADOS COM ATÉ</p>
+        <p id="desc">50%OFF</p>
+      </div>
+    </div>
+    <div class="div-corrossel">
+      <div class="lancamento-mais">
+        <p>Lançamentos</p>
+        <a href="#">Ver mais</a>
+      </div>
+      <div class="container-carrossel" >
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide card">
+              <span class="badge">NOVO</span>
+              <img src="./public/images/modelo.png" alt="Produto" />
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipisicing Elit</h3>
+              <div style="display: flex;">
+                <div>
+                  <p class="price-antigo">R$ 100,00</p>
+                  <p class="price">R$79,90 </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <span class="desconto">10% OFF</span>
+                </div>
+              </div>
+              <p style="text-align: left; padding-bottom: 13px;">Ou em até 10x de R$ 7,90</p>
+              <button>Comprar</button>
+            </div>
+            <div class="swiper-slide card">
+              <span class="badge">NOVO</span>
+              <img src="./public/images/modelo.png" alt="Produto" />
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipisicing Elit</h3>
+              <div style="display: flex;">
+                <div>
+                  <p class="price-antigo">R$ 100,00</p>
+                  <p class="price">R$79,90 </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <span class="desconto">10% OFF</span>
+                </div>
+              </div>
+              <p style="text-align: left; padding-bottom: 13px;">Ou em até 10x de R$ 7,90</p>
+              <button>Comprar</button>
+            </div>
+            <div class="swiper-slide card">
+              <span class="badge">NOVO</span>
+              <img src="./public/images/modelo.png" alt="Produto" />
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipisicing Elit</h3>
+              <div style="display: flex;">
+                <div>
+                  <p class="price-antigo">R$ 100,00</p>
+                  <p class="price">R$79,90 </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <span class="desconto">10% OFF</span>
+                </div>
+              </div>
+              <p style="text-align: left; padding-bottom: 13px;">Ou em até 10x de R$ 7,90</p>
+              <button>Comprar</button>
+            </div>
+            <div class="swiper-slide card">
+              <span class="badge">NOVO</span>
+              <img src="./public/images/modelo.png" alt="Produto" />
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipisicing Elit</h3>
+              <div style="display: flex;">
+                <div>
+                  <p class="price-antigo">R$ 100,00</p>
+                  <p class="price">R$79,90 </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <span class="desconto">10% OFF</span>
+                </div>
+              </div>
+              <p style="text-align: left; padding-bottom: 13px;">Ou em até 10x de R$ 7,90</p>
+              <button>Comprar</button>
+            </div>
+            <div class="swiper-slide card">
+              <span class="badge">NOVO</span>
+              <img src="./public/images/modelo.png" alt="Produto" />
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipisicing Elit</h3>
+              <div style="display: flex;">
+                <div>
+                  <p class="price-antigo">R$ 100,00</p>
+                  <p class="price">R$79,90 </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <span class="desconto">10% OFF</span>
+                </div>
+              </div>
+              <p style="text-align: left; padding-bottom: 13px;">Ou em até 10x de R$ 7,90</p>
+              <button>Comprar</button>
+            </div>
+            <div class="swiper-slide card">
+              <span class="badge">NOVO</span>
+              <img src="./public/images/modelo.png" alt="Produto" />
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipisicing Elit</h3>
+              <div style="display: flex;">
+                <div>
+                  <p class="price-antigo">R$ 100,00</p>
+                  <p class="price">R$79,90 </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <span class="desconto">10% OFF</span>
+                </div>
+              </div>
+              <p style="text-align: left; padding-bottom: 13px;">Ou em até 10x de R$ 7,90</p>
+              <button>Comprar</button>
+            </div>
+          </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    <div class="banner-caneca">
+      <div class="caneca">
+        <img src="./public/images/caneca.png"
+        class="img-caneca"
+         alt="caneca preta"
+          style=" background: rgb(166, 165, 165); object-fit: contain" />
+      </div>
+      <div class="texto-caneca">
+        <h2>CANECA AVANTI</h2>
+        <p>Lorem ipsum dolor sit,
+           amet consectetur adipisicing elit.
+            Illo mollitia error minima distinctio 
+            ducimus in nihil placeat perspiciatis necessitatibus vel, 
+            consequatur quis blanditiis molestiae quas iure beatae atque nemo iste?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, sunt at porro libero minus hic labore obcaecati quisquam animi voluptatum sed neque? Esse ducimus aliquid iure, dignissimos veniam maxime qui.</p>
+        <p>Lorem ipsum dolor sit amet consectetur 
+          adipisicing elit. Dolores rem vitae fuga,
+           a consequuntur voluptate vero ratione
+            mollitia natus ea sequi, veritatis 
+            hic aliquam quaerat, fugit dolorum necessitatibus
+             laboriosam ipsam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore animi ducimus ex, molestias blanditiis impedit accusamus distinctio at. Sed vitae nobis ipsum sapiente </p>
+      </div>
+    </div>
+    <div class="container-taboa-caneca">
+      <div class="left-section">
+        <h2>LOREM IPSUM</h2>     
+        <div class="info-block">
+          <div class="icon-circle">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <p>
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+          </p>
+        </div>
+        <div class="info-block">
+          <div class="icon-circle">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <p>
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+          </p>
+        </div>
+  
+        <div class="info-block">
+          <div class="icon-circle">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <p>
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+          </p>
+        </div>
+      </div>
+  
+      <div class="right-section">
+        <img src="./public/images/taboaCaneca.png" alt="Imagem de caneca Avanti" />
+      </div>
+    </div>
+    <div class="banner-caneca">
+      <div class="caneca">
+        <img src="./public/images/caneca.png"
+        class="img-caneca"
+         alt="caneca preta"
+          style=" background: rgb(166, 165, 165); object-fit: contain" />
+      </div>
+      <div class="texto-caneca">
+        <h2>CANECA AVANTI</h2>
+        <p>Lorem ipsum dolor sit,
+           amet consectetur adipisicing elit.
+            Illo mollitia error minima distinctio 
+            ducimus in nihil placeat perspiciatis necessitatibus vel, 
+            consequatur quis blanditiis molestiae quas iure beatae atque nemo iste?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, sunt at porro libero minus hic labore obcaecati quisquam animi voluptatum sed neque? Esse ducimus aliquid iure, dignissimos veniam maxime qui.</p>
+        <p>Lorem ipsum dolor sit amet consectetur 
+          adipisicing elit. Dolores rem vitae fuga,
+           a consequuntur voluptate vero ratione
+            mollitia natus ea sequi, veritatis 
+            hic aliquam quaerat, fugit dolorum necessitatibus
+             laboriosam ipsam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore animi ducimus ex, molestias blanditiis impedit accusamus distinctio at. Sed vitae nobis ipsum sapiente </p>
+      </div>
+    </div>
+    <div class="div-corrossel">
+      <div class="lancamento-mais">
+        <p>Lançamentos</p>
+        <a href="#">Ver mais</a>
+      </div>
+      <div class="container-carrossel" >
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide card">
+              <span class="badge">NOVO</span>
+              <img src="./public/images/modelo.png" alt="Produto" />
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipisicing Elit</h3>
+              <div style="display: flex;">
+                <div>
+                  <p class="price-antigo">R$ 100,00</p>
+                  <p class="price">R$79,90 </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <span class="desconto">10% OFF</span>
+                </div>
+              </div>
+              <p style="text-align: left; padding-bottom: 13px;">Ou em até 10x de R$ 7,90</p>
+              <button>Comprar</button>
+            </div>
+            <div class="swiper-slide card">
+              <span class="badge">NOVO</span>
+              <img src="./public/images/modelo.png" alt="Produto" />
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipisicing Elit</h3>
+              <div style="display: flex;">
+                <div>
+                  <p class="price-antigo">R$ 100,00</p>
+                  <p class="price">R$79,90 </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <span class="desconto">10% OFF</span>
+                </div>
+              </div>
+              <p style="text-align: left; padding-bottom: 13px;">Ou em até 10x de R$ 7,90</p>
+              <button>Comprar</button>
+            </div>
+            <div class="swiper-slide card">
+              <span class="badge">NOVO</span>
+              <img src="./public/images/modelo.png" alt="Produto" />
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipisicing Elit</h3>
+              <div style="display: flex;">
+                <div>
+                  <p class="price-antigo">R$ 100,00</p>
+                  <p class="price">R$79,90 </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <span class="desconto">10% OFF</span>
+                </div>
+              </div>
+              <p style="text-align: left; padding-bottom: 13px;">Ou em até 10x de R$ 7,90</p>
+              <button>Comprar</button>
+            </div>
+            <div class="swiper-slide card">
+              <span class="badge">NOVO</span>
+              <img src="./public/images/modelo.png" alt="Produto" />
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipisicing Elit</h3>
+              <div style="display: flex;">
+                <div>
+                  <p class="price-antigo">R$ 100,00</p>
+                  <p class="price">R$79,90 </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <span class="desconto">10% OFF</span>
+                </div>
+              </div>
+              <p style="text-align: left; padding-bottom: 13px;">Ou em até 10x de R$ 7,90</p>
+              <button>Comprar</button>
+            </div>
+            <div class="swiper-slide card">
+              <span class="badge">NOVO</span>
+              <img src="./public/images/modelo.png" alt="Produto" />
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipisicing Elit</h3>
+              <div style="display: flex;">
+                <div>
+                  <p class="price-antigo">R$ 100,00</p>
+                  <p class="price">R$79,90 </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <span class="desconto">10% OFF</span>
+                </div>
+              </div>
+              <p style="text-align: left; padding-bottom: 13px;">Ou em até 10x de R$ 7,90</p>
+              <button>Comprar</button>
+            </div>
+            <div class="swiper-slide card">
+              <span class="badge">NOVO</span>
+              <img src="./public/images/modelo.png" alt="Produto" />
+              <h3>Lorem Ipsum Dolor Sit Amet Consectetuer Adipisicing Elit</h3>
+              <div style="display: flex;">
+                <div>
+                  <p class="price-antigo">R$ 100,00</p>
+                  <p class="price">R$79,90 </p>
+                </div>
+                <div style="display: flex; align-items: center;">
+                  <span class="desconto">10% OFF</span>
+                </div>
+              </div>
+              <p style="text-align: left; padding-bottom: 13px;">Ou em até 10x de R$ 7,90</p>
+              <button>Comprar</button>
+            </div>
+          </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <section class="entre-em-contato">
+        <div class="paredeAvanti">
+          <img src="./public/images/paredeAvanti.png" alt="fundo com logo avanti estamapdo em uma parede">
+          <p>Entre em contato e verifique a disponibilidade para sua região!</p>
+        </div>
+        <div class="newsletter">
+          <p>
+            Cadastre-se na nossa 
+          </p>
+          <a href="">newsletter</a>
+        </div>
+        <form action="#" method="">
+          <div class="nome-email">
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required />
+            <input type="email" name="email" id="e-mail" placeholder="Digite seu e-mail" required />
+          </div>
+            <div class="checkbox-container">
+             <div class="checkbox">
+               <input type="checkbox" id="concordo" required />
+               <span>
+                 <p>Estou de acordo com a</p>
+                 <p style="text-decoration: underline;">Politica de Privacidade</p>
+                </span>
+              </div>
+            <button class="button-cadastro">Cadastrar</button>
+          </div>
+        </form>
+      </section>
+      <section class="info-section">
+        <div class="info-container">
+          <div class="column logo">
+            <div class="container-img">
+              <img style="object-fit: cover;" src="./public/images/logoAvanti.png" alt="">
+            </div>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+    
+          <div class="column">
+            <h4><b>Institucional</b></h4>
+            <h5>Sobre Nós</h5>
+            <h5>Nossas Lojas</h5>
+            <h5>Privacidade e Segurança</h5>
+            <h5>Termos e Condições</h5>
+          </div>
+    
+          <div class="column">
+            <h4><b>Central de ajuda</b></h4>
+            <h5>Fale Conosco</h5>
+            <h5>Frete e Entrega</h5>
+            <h5>Trocas e Devoluções</h5>
+            <h5>Formas de Pagamento</h5>
+            <h5>FAQ</h5>
+          </div>
+    
+          <div class="column">
+            <h4><b>Atendimento</b></h4>
+            <h5><b>Telefone:</b> (00) 1234-5678</h5>
+            <h5><b>E-mail:</b> exemplo@exemplo.com.br</h5>
+            <h5><b>Horário de atendimento:</b></h5>
+            <h5>Segunda a Sábado: 07h00 às 23h00</h5>
+            <h5>Domingos e Feriados: 07h00 às 21h00</h5>
+          </div>
+        </div>
+    
+        <div class="payments">
+          <i class="fab fa-cc-amex"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-discover"></i>
+          <i class="fab fa-cc-paypal"></i>
+          <i class="fa-brands fa-pix"></i>
+          <i class="fas fa-qrcode"></i>
+          <i class="fas fa-barcode"></i>
+        </div>
+      </section>
+      <footer class="footer-description">
+        <div class="footer-text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
+            et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+          </p>
+        </div>
+        <div class="footer-logos">
+<img src="./public/images/marcas.png" alt="varias imagens de marcas">
+        </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 5,
+      spaceBetween: 5,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        412: { slidesPerView: 1 },
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 4 },
+        1280: { slidesPerView: 5 },
+      },
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
 </html>

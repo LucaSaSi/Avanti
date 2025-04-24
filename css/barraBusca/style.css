@@ -1,27 +1,148 @@
 .container-busca {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border: 3px solid #ed4a09;
+  justify-content: center;
+  width: 100%;
 }
-.logo {
-  /* width: 35%; */
+
+.container-busca #btn-busca {
+  width: 40px;
+  background: transparent;
+  color: rgb(0, 3, 5);
+}
+
+.input-busca {
   display: flex;
-  justify-content: right;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  border: 1px solid rgb(184, 181, 180);
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+}
+.div-logo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 250px;
 }
 .div-busca {
   display: flex;
-  /* width: 50%; */
-  #busca {
-    width: 50%;
-    font-size: 12px;
-    font-weight: 600;
-    border: none;
-    outline: none;
-  }
+  justify-content: space-between;
+  width: 500px;
+  margin-right: 60px;
+}
+
+.div-busca #busca {
+  font-size: 12px;
+  width: 80%;
+  font-weight: 600;
+  border: none;
+  outline: none;
 }
 .cliente {
   display: flex;
-  /* width: 25%; */
-  /* gap: 20px; */
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  gap: 20px;
+  font-size: 30px;
 }
+.cliente #user {
+  color: rgb(23, 12, 5);
+}
+
+.cliente #shop {
+  color: rgb(23, 12, 5);
+}
+.cliente .cliente-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.cliente .cliente-icons p {
+  font-size: 15px;
+  color: rgb(68, 66, 66);
+}
+
+@media (max-width: 1024px) {
+  .container-busca {
+    padding: 10px 0px;
+  }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .container-busca {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .div-busca {
+    width: 95%;
+    margin-left: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .container-busca .input-busca {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+  }
+
+  .container-busca #btn-busca {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+  }
+
+  .container-busca .input-busca #busca {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .container-busca .input-busca .icon-lupa {
+    font-size: 30px;
+    color: rgb(68, 66, 66);
+  }
+
+  .container-busca .div-logo {
+    display: none;
+  }
+
+  .cliente {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 40px;
+  }
+
+  .cliente .cliente-icons {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 70%;
+    gap: 20px;
+  }
+
+  .cliente .cliente-icons p {
+    font-size: 20px;
+  }
+}
+

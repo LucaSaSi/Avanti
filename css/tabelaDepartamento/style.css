@@ -1,0 +1,177 @@
+.tabela-dep-cat {
+  width: 80%;
+  height: 330px;
+  margin-top: 149px;
+  position: fixed;
+  background: rgb(246, 244, 244);
+  display: none;
+  justify-content: space-between;
+  box-shadow: 0px 0px 10px 0px #000000;
+  gap: 10px;
+}
+
+.departamentos {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: rgb(237, 234, 234);
+}
+
+.tabela-dep-cat .table-departamento {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  border-collapse: collapse;
+}
+
+.tbody-tabela-dep td {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabela-dep-cat .departamentos {
+  width: 30%;
+  height: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.container-dep-cat {
+  width: 40%;
+  height: 100%;
+  padding-left: 10px;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+
+.tabela-dep-cat .img-dep-cat {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.tabela-dep-cat table {
+  width: 300px;
+  height: 230px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabela-dep-cat h2 {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  font-size: 20px;
+  height: 20%;
+}
+
+.tabela-dep-cat thead {
+  color: blue;
+}
+
+@media (max-width: 1024px) {
+  .tabela-dep-cat {
+    width: 80%;
+    height: 250px;
+    margin-top: 150px;
+    position: fixed;
+    background: rgb(246, 244, 244);
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px 0px #000000;
+  }
+
+  .tabela-dep-cat .img-dep-cat {
+    width: 200px;
+  }
+
+  .tabela-dep-cat .img-dep-cat .img-dep-cat-resp {
+    width: 100%;
+    height: 90%;
+  }
+
+  .tabela-dep-cat .departamentos {
+    width: 30%;
+    height: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+
+  .container-dep-cat {
+    width: 40%;
+  }
+}
+
+@media (max-width: 915px) and (orientation: landscape) {
+  .tabela-dep-cat {
+    width: 100%;
+    height: 250px;
+    z-index: 1000;
+    display: none;
+    background: rgb(246, 244, 244);
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px 0px #000000;
+  }
+
+  .tabela-dep-cat .img-dep-cat {
+    width: 200px;
+  }
+
+  .tabela-dep-cat .img-dep-cat .img-dep-cat-resp {
+    width: 100%;
+    height: 90%;
+  }
+
+  .tabela-dep-cat .departamentos {
+    width: 30%;
+    height: 100%;
+  }
+
+  .container-dep-cat {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabela-dep-cat {
+    width: 100%;
+    height: 250px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .tabela-dep-cat .departamentos {
+    display: flex;
+    width: 120px;
+    height: 100%;
+    font-size: 13px;
+  }
+
+  .tabela-dep-cat .container-dep-cat h2 {
+    font-size: 14px;
+    width: 100%;
+    text-decoration: underline;
+  }
+
+  .tabela-dep-cat .container-dep-cat {
+    display: flex;
+    font-size: 13px;
+    width: 100px;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .tabela-dep-cat .img-dep-cat {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

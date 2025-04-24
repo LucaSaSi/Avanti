@@ -1,0 +1,142 @@
+.container-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-color: #f0f0f0;
+}
+
+.lado-esquerdo {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: right;
+}
+
+.lado-direito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.lado-direito .super-sale {
+  display: flex;
+  height: 30%;
+  width: 100%;
+  align-items: center;
+  text-align: left;
+  gap: 8px;
+}
+
+.lado-direito #super {
+  font-family: "emberlin", sans-serif;
+  font-weight: bold;
+  font-size: 6em;
+}
+
+#sale {
+  font-family: "emberlin", sans-serif;
+  font-weight: 100;
+  font-size: 6em;
+}
+#itens {
+  font-family: "emberlin", sans-serif;
+  font-size: 30px;
+  color: blue;
+}
+
+#desc {
+  width: 63%;
+  font-weight: 700;
+  font-size: 50px;
+  color: blue;
+  font-family: "emberlin", sans-serif;
+}
+
+@media (max-width: 1024px) {
+  .container-banner {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-banner .lado-direito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-banner .lado-direito .super-sale {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .container-banner .lado-direito .itens {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-banner .lado-direito #desc {
+    display: flex;
+    justify-content: center;
+    width: 63%;
+    font-weight: 700;
+    font-size: 50px;
+    color: blue;
+    font-family: "emberlin", sans-serif;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-banner {
+    width: 100%;
+    height: 200px;
+    display: none;
+    justify-content: center;
+    border: 2px solid #000;
+  }
+
+  .lado-direito,
+  .lado-esquerdo {
+    width: 50%;
+    border: 2px solid #cc0d0d;
+  }
+}
+
+@media (max-width: 915px) and (orientation: landscape) {
+  .container-banner {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-banner .lado-direito,
+  .lado-esquerdo {
+    width: 50%;
+  }
+
+  .container-banner .lado-direito .super-sale {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: left;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .container-banner .lado-direito p {
+    display: flex;
+    width: 65%;
+    align-items: center;
+    justify-content: left;
+  }
+}

@@ -1,24 +1,115 @@
-nav {
-  width: 100%;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-}
 .categorias {
   display: flex;
+  width: 70%;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
+}
+
+.categorias #btn-todCats,
+#dep {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 #dep {
+  font-weight: bold;
+  width: 100px;
+}
+
+#btn-todCats {
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+#dep,
+#btn-todCats {
   color: #333;
-  border: none;
   background: none;
+  border: none;
 }
 #btn-todCats:hover,
 #dep:hover {
   cursor: pointer;
   color: #2b8cf4;
-  font-weight: bold;
-  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+@media (max-width: 1024px) {
+  .categorias {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #btn-todCats {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 130px;
+    font-size: 11px;
+  }
+  #dep {
+    font-size: 14px;
+  }
+}
+
+/* @media (max-width: 915px) and (orientation: landscape) {
+  .categorias {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .categorias p {
+    font-size: 12px;
+  }
+
+  #btn-todCats {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 130px;
+    font-size: 11px;
+  }
+  #dep {
+    font-size: 14px;
+  }
+} */
+
+@media (max-width: 480px) and (orientation: portrait) {
+  .categorias {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow-y:  auto;
+    gap: 8px;
+    background-color: #fff;
+  }
+
+  .categorias p {
+    margin: 0;
+    padding: 4px 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+  }
+
+  .categorias #btn-todCats {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80px;
+    font-size: 11px;
+  }
+
+  #dep {
+    font-size: 14px;
+  }
 }

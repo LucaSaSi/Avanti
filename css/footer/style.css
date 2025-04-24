@@ -1,0 +1,26 @@
+.footer-description {
+  padding: 30px 20px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+  border-top: 1px solid #eee;
+}
+
+.footer-text {
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logos img {
+  height: 30px;
+  object-fit: contain;
+}
